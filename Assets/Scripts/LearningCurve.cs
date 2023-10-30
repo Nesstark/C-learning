@@ -79,7 +79,7 @@ public class LearningCurve : MonoBehaviour
             "Sterling the Knight"
         };
         
-        QuestPartyMembers.Insert(position, name); //Adding name and position on the list from Start()
+        QuestPartyMembers.Insert(position, name); //Adding name and position on the list thats called on from Start()
 
         Debug.LogFormat("Party Members: {0}", QuestPartyMembers.Count);
 
