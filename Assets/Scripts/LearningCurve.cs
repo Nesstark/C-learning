@@ -71,7 +71,7 @@ public class LearningCurve : MonoBehaviour
 
     public void FindPartyMember(int position, string name)
     {
-        
+
         List<string> QuestPartyMembers = new List<string>()
         {
             "Grim the Barbarian",
@@ -79,7 +79,7 @@ public class LearningCurve : MonoBehaviour
             "Sterling the Knight"
         };
         
-        QuestPartyMembers.Insert(position, name); //Adding name on the list from Start()
+        QuestPartyMembers.Insert(position, name); //Adding name and position on the list from Start()
 
         Debug.LogFormat("Party Members: {0}", QuestPartyMembers.Count);
 
