@@ -44,7 +44,7 @@ public class LearningCurve : MonoBehaviour
         OpenTreasureChamber();
         PrintCharacterAction();
         RollDice();
-	    FindPartyMember();
+	    FindPartyMember(3, "Emil Madsen"); //Adding my name and position on the list of party members
 
         Dictionary<string, int> ItemInventory = new Dictionary<string, int>()
         {
@@ -54,7 +54,7 @@ public class LearningCurve : MonoBehaviour
         };
         Debug.LogFormat("Items: {0}", ItemInventory.Count);
 
-        FindPartyMember();
+        FindPartyMember(3, "Emil Madsen"); //Adding my name and position on the list of party members
         HealthStatus();
     }
 
@@ -69,17 +69,18 @@ public class LearningCurve : MonoBehaviour
         Debug.Log("Player KO'd...");
     }
 
-    public void FindPartyMember()  //input parameter 1, shoulb be your own name.
-                                   //input parameter 2, should be the place in the list
-                                   //Where you want you to be added
-        //Call this method from Start(), and print the whole list of players, you included.
+    public void FindPartyMember(int position, string name)
     {
+        
         List<string> QuestPartyMembers = new List<string>()
         {
             "Grim the Barbarian",
             "Merlin the Wise",
             "Sterling the Knight"
         };
+        
+        QuestPartyMembers.Insert(position, name); //Adding name on the list from Start()
+
         Debug.LogFormat("Party Members: {0}", QuestPartyMembers.Count);
 
         for(int i = 0; i < QuestPartyMembers.Count; i++)
